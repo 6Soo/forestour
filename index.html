@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버스 좌석표</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>버스 좌석표</h1>
+    <div class="bus-layout">
+        <!-- 운전석 그룹 (A, B열) -->
+        <div class="driver-group">
+            <div class="driver">운전석</div>
+            <div class="bus-seats left">
+                <div class="row">
+                    <button class="seat" data-seat="1A">1A</button>
+                    <button class="seat" data-seat="1B">1B</button>
+                </div>
+                <div class="row">
+                    <button class="seat" data-seat="2A">2A</button>
+                    <button class="seat" data-seat="2B">2B</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 출입문 그룹 (C, D열) -->
+        <div class="door-group">
+            <div class="door">출입문</div>
+            <div class="bus-seats right">
+                <div class="row">
+                    <button class="seat" data-seat="1C">1C</button>
+                    <button class="seat" data-seat="1D">1D</button>
+                </div>
+                <div class="row">
+                    <button class="seat" data-seat="2C">2C</button>
+                    <button class="seat" data-seat="2D">2D</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 컨트롤 영역 -->
+    <div class="controls">
+        <label for="row-input">추가할 좌석 수:</label>
+        <input type="number" id="row-input" min="1" value="1">
+        <button id="add-rows">좌석 추가</button>
+        <button id="remove-rows">좌석 삭제</button>
+    </div>
+
+    <!-- 카카오톡 공유 버튼 -->
+    <div class="share">
+        <button id="kakao-share-btn">카카오톡으로 공유</button>
+    </div>
+
+    <!-- Kakao SDK 불러오기 -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
