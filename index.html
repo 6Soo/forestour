@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>버스 좌석표</title>
+    <title>숲길여행 버스좌석표</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>버스 좌석표</h1>
+    <h1>숲길여행 버스좌석표</h1>
     <div class="bus-layout">
         <!-- 운전석 그룹 (A, B열) -->
-        <div class="driver-group">
+        <div class="driver-group" id="driver-group">
             <div class="driver">운전석</div>
             <div class="bus-seats left">
                 <div class="row">
@@ -25,7 +25,7 @@
         </div>
 
         <!-- 출입문 그룹 (C, D열) -->
-        <div class="door-group">
+        <div class="door-group" id="door-group">
             <div class="door">출입문</div>
             <div class="bus-seats right">
                 <div class="row">
@@ -40,23 +40,15 @@
         </div>
     </div>
 
-    <!-- 컨트롤 영역 -->
+    <!-- 좌석 추가/삭제 및 변경 컨트롤 -->
     <div class="controls">
         <label for="row-input">추가할 좌석 수:</label>
         <input type="number" id="row-input" min="1" value="1">
         <button id="add-rows">좌석 추가</button>
         <button id="remove-rows">좌석 삭제</button>
+        <button id="swap-groups">운전석 출입문 변경</button> <!-- 새로운 버튼 추가 -->
     </div>
 
-    // <!-- 카카오톡 공유 버튼 -->
-    <div class="share">
-        <button id="kakao-share-btn">카카오톡으로 공유</button>
-    </div>
-
-    <!-- Kakao SDK 불러오기 -->
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script src="script.js"></script>
-//
 </body>
 </html>
