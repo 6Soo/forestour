@@ -75,6 +75,8 @@ document.getElementById('swap-groups').addEventListener('click', function() {
     // 두 그룹의 위치를 바꾸기
     if (driverGroup && doorGroup) {
         const parent = driverGroup.parentNode;
+        const driverGroupNextSibling = driverGroup.nextSibling; // 운전석 그룹 다음 요소를 저장
         parent.insertBefore(doorGroup, driverGroup); // 출입문 그룹을 운전석 그룹 앞에 위치시킴
+        parent.insertBefore(driverGroup, driverGroupNextSibling); // 원래의 다음 요소 위치로 운전석 그룹을 이동시킴
     }
 });
