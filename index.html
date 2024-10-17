@@ -9,22 +9,9 @@
 <body>
     <h1>숲길여행 버스좌석표</h1>
     <div class="bus-layout">
-        <!-- 출입문 그룹 (C열, 이전에 운전석이 있던 위치) -->
-        <div class="door-group" id="door-group">
-            <div class="door">출입문</div>
-            <div class="bus-seats right">
-                <div class="row" data-row="1">
-                    <div class="driver" id="driver">운전석</div> <!-- 운전석이 1C 위치로 이동 -->
-                </div>
-                <div class="row" data-row="2">
-                    <button class="seat" data-seat="2C">2C</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- 운전석 그룹 (A, B열, 1C가 있던 위치로 이동) -->
+        <!-- 운전석 그룹 (A, B열) -->
         <div class="driver-group" id="driver-group">
-            <button class="seat" id="1C" data-seat="1C">1C</button> <!-- 1C가 운전석 위치로 이동 -->
+            <div class="driver">운전석</div>
             <div class="bus-seats left">
                 <div class="row" data-row="1">
                     <button class="seat" data-seat="1A">1A</button>
@@ -36,9 +23,22 @@
                 </div>
             </div>
         </div>
+
+        <!-- 출입문 그룹 (C열) -->
+        <div class="door-group" id="door-group">
+            <div class="door">출입문</div>
+            <div class="bus-seats right">
+                <div class="row" data-row="1">
+                    <button class="seat" data-seat="1C">1C</button>
+                </div>
+                <div class="row" data-row="2">
+                    <button class="seat" data-seat="2C">2C</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- 좌석 추가/삭제 컨트롤 -->
+    <!-- 좌석 추가/삭제 및 변경 컨트롤 -->
     <div class="controls">
         <label for="row-input">추가할 좌석 수:</label>
         <input type="number" id="row-input" min="1" value="1">
