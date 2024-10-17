@@ -20,6 +20,7 @@ document.getElementById('add-rows').addEventListener('click', function() {
         // A, B 열 추가
         const newLeftRow = document.createElement('div');
         newLeftRow.classList.add('row');
+        newLeftRow.dataset.row = rowNumber;
         for (let j = 0; j < 2; j++) { // A, B 좌석
             const seat = document.createElement('button');
             seat.classList.add('seat');
@@ -35,22 +36,21 @@ document.getElementById('add-rows').addEventListener('click', function() {
         }
         leftSeats.appendChild(newLeftRow);
 
-        // C, D 열 추가
+        // C 열 추가 (D열 삭제됨)
         const newRightRow = document.createElement('div');
         newRightRow.classList.add('row');
-        for (let j = 2; j < 4; j++) { // C, D 좌석
-            const seat = document.createElement('button');
-            seat.classList.add('seat');
-            seat.textContent = `${rowNumber}${String.fromCharCode(65 + j)}`;
-            seat.dataset.seat = `${rowNumber}${String.fromCharCode(65 + j)}`;
-            seat.addEventListener('click', function() {
-                const name = prompt('이름을 입력하세요:', seat.textContent);
-                if (name !== null) {
-                    seat.textContent = name;
-                }
-            });
-            newRightRow.appendChild(seat);
-        }
+        newRightRow.dataset.row = rowNumber;
+        const seat = document.createElement('button');
+        seat.classList.add('seat');
+        seat.textContent = `${rowNumber}C`;
+        seat.dataset.seat = `${rowNumber}C`;
+        seat.addEventListener('click', function() {
+            const name = prompt('이름을 입력하세요:', seat.textContent);
+            if (name !== null) {
+                seat.textContent = name;
+            }
+        });
+        newRightRow.appendChild(seat);
         rightSeats.appendChild(newRightRow);
     }
 });
@@ -64,19 +64,5 @@ document.getElementById('remove-rows').addEventListener('click', function() {
     if (leftSeats.lastElementChild && rightSeats.lastElementChild) {
         leftSeats.removeChild(leftSeats.lastElementChild);
         rightSeats.removeChild(rightSeats.lastElementChild);
-    }
-});
-
-// 운전석과 출입문 그룹 위치 변경 기능
-document.getElementById('swap-groups').addEventListener('click', function() {
-    const driverGroup = document.getElementById('driver-group');
-    const doorGroup = document.getElementById('door-group');
-
-    // 두 그룹의 위치를 바꾸기
-    if (driverGroup && doorGroup) {
-        const parent = driverGroup.parentNode;
-        const driverGroupNextSibling = driverGroup.nextSibling; // 운전석 그룹 다음 요소를 저장
-        parent.insertBefore(doorGroup, driverGroup); // 출입문 그룹을 운전석 그룹 앞에 위치시킴
-        parent.insertBefore(driverGroup, driverGroupNextSibling); // 원래의 다음 요소 위치로 운전석 그룹을 이동시킴
     }
 });
