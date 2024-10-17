@@ -55,14 +55,35 @@ document.getElementById('add-rows').addEventListener('click', function() {
     }
 });
 
-// 좌석 삭제 기능
-document.getElementById('remove-rows').addEventListener('click', function() {
-    const leftSeats = document.querySelector('.bus-seats.left');
-    const rightSeats = document.querySelector('.bus-seats.right');
+document.getElementById('add-rows').addEventListener('click', function () {
+    const rowCount = parseInt(document.getElementById('row-input').value);
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
 
-    // 마지막 열 삭제
-    if (leftSeats.lastElementChild && rightSeats.lastElementChild) {
-        leftSeats.removeChild(leftSeats.lastElementChild);
-        rightSeats.removeChild(rightSeats.lastElementChild);
+    for (let i = 0; i < rowCount; i++) {
+        const newRowLeft = document.createElement('div');
+        newRowLeft.classList.add('row');
+        newRowLeft.innerHTML = `<button class="seat" data-seat="new">새 좌석</button>`;
+        leftColumn.appendChild(newRowLeft);
+
+        const newRowRight = document.createElement('div');
+        newRowRight.classList.add('row');
+        newRowRight.innerHTML = `<button class="seat" data-seat="new">새 좌석</button><button class="seat" data-seat="new">새 좌석</button>`;
+        rightColumn.appendChild(newRowRight);
     }
+});
+
+document.getElementById('remove-rows').addEventListener('click', function () {
+    const leftColumn = document.querySelector('.left-column');
+    const rightColumn = document.querySelector('.right-column');
+
+    // 좌석 삭제 기능 구현
+    if (leftColumn.lastElementChild) {
+        leftColumn.removeChild(leftColumn.lastElementChild);
+    }
+    if (rightColumn.lastElementChild) {
+        rightColumn.removeChild(rightColumn.lastElementChild);
+    }
+});
+
 });
