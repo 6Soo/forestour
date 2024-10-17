@@ -9,29 +9,32 @@
 <body>
     <h1>숲길여행 버스좌석표</h1>
     <div class="bus-layout">
-        <!-- 운전석 그룹 (A, B열) -->
-        <div class="driver-group" id="driver-group">
-            <div class="driver">운전석</div>
-            <div class="bus-seats left">
+        <!-- 좌석 및 운전석 그룹 -->
+        <div class="bus-seats-layout">
+            <!-- 왼쪽 열 -->
+            <div class="left-column">
                 <div class="row" data-row="1">
                     <button class="seat" data-seat="1A">1A</button>
-                    <button class="seat" data-seat="1B">1B</button>
+                </div>
+                <div class="row" data-row="door">
+                    <div class="door">출입문</div>
                 </div>
                 <div class="row" data-row="2">
                     <button class="seat" data-seat="2A">2A</button>
-                    <button class="seat" data-seat="2B">2B</button>
                 </div>
             </div>
-        </div>
 
-        <!-- 출입문 그룹 (C열) -->
-        <div class="door-group" id="door-group">
-            <button class="seat" id="1C" data-seat="1C">1C</button> <!-- 1C 좌석이 출입문 자리로 이동 -->
-            <div class="bus-seats right">
+            <!-- 오른쪽 열 -->
+            <div class="right-column">
                 <div class="row" data-row="1">
-                    <div class="door">출입문</div> <!-- 출입문이 1C 좌석 자리로 이동 -->
+                    <div class="driver">운전석</div>
+                </div>
+                <div class="row" data-row="1">
+                    <button class="seat" data-seat="1B">1B</button>
+                    <button class="seat" data-seat="1C">1C</button>
                 </div>
                 <div class="row" data-row="2">
+                    <button class="seat" data-seat="2B">2B</button>
                     <button class="seat" data-seat="2C">2C</button>
                 </div>
             </div>
