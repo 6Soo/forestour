@@ -28,12 +28,8 @@
     border-radius: 10px; /* 좌석 및 요소의 둥근 모양 */
 }
 
-/* 운전석과 출입문 위치 조정 */
-.driver {
-    background-color: #ddd; /* 운전석 배경색 (약간 어두운 회색) */
-}
-
-.door {
-    background-color: #ccc; /* 출입문 배경색 (밝은 회색) */
-    margin-top: 3px; /* 출입문을 살짝 아래로 이동 */
+/* 운전석과 출입문 동일한 스타일 */
+.driver, .door {
+    background-color: #ddd; /* 운전석과 출입문 동일한 배경색 */
+    margin-top: 0; /* 출입문의 마진 제거 */
 }
