@@ -13,6 +13,8 @@
 
 /* 각 행 설정 */
 .row {
+    display: flex;
+    justify-content: center; /* 수평 정렬 */
     margin-bottom: 10px; /* 행 사이 간격 */
 }
 
