@@ -79,3 +79,30 @@ h1 {
     font-weight: bold;
     border: 2px solid #000;
 }
+
+.bus-layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+.seat, .driver, .door {
+    width: 80px;
+    height: 80px;
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
