@@ -9,33 +9,29 @@
 <body>
     <h1>숲길여행 버스좌석표</h1>
     <div class="bus-layout">
-        <div class="bus-seats-layout">
-            <!-- 왼쪽 열 -->
-            <div class="left-column">
-                <div class="row" data-row="1">
-                    <button class="seat" data-seat="1A">1A</button>
-                </div>
-                <div class="row" data-row="2">
-                    <button class="seat" data-seat="2A">2A</button>
-                </div>
+        <div class="left-column">
+            <div class="row" data-row="1">
+                <button class="seat" data-seat="1A">1A</button>
             </div>
+            <div class="row" data-row="2">
+                <div class="door">출입문</div>
+            </div>
+            <div class="row" data-row="3">
+                <button class="seat" data-seat="2A">2A</button>
+            </div>
+        </div>
 
-            <!-- 오른쪽 열 -->
-            <div class="right-column">
-                <div class="row" data-row="1">
-                    <button class="door">출입문</button>
-                </div>
-                <div class="row" data-row="2">
-                    <div class="driver">운전석</div>
-                </div>
-                <div class="row" data-row="3">
-                    <button class="seat" data-seat="1B">1B</button>
-                    <button class="seat" data-seat="1C">1C</button>
-                </div>
-                <div class="row" data-row="4">
-                    <button class="seat" data-seat="2B">2B</button>
-                    <button class="seat" data-seat="2C">2C</button>
-                </div>
+        <div class="right-column">
+            <div class="row" data-row="1">
+                <div class="driver">운전석</div>
+            </div>
+            <div class="row" data-row="2">
+                <button class="seat" data-seat="1B">1B</button>
+                <button class="seat" data-seat="1C">1C</button>
+            </div>
+            <div class="row" data-row="3">
+                <button class="seat" data-seat="2B">2B</button>
+                <button class="seat" data-seat="2C">2C</button>
             </div>
         </div>
     </div>
