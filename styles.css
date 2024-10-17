@@ -15,7 +15,7 @@
 .row {
     display: flex;
     justify-content: center; /* 수평 정렬 */
-    margin-bottom: 10px; /* 행 사이 간격 */
+    margin-bottom: 6px; /* 행 사이 간격을 6px로 설정 */
 }
 
 /* 좌석, 운전석, 출입문 공통 스타일 */
@@ -28,15 +28,20 @@
     font-weight: bold;
     border: 2px solid #000; /* 검은색 테두리 */
     border-radius: 10px; /* 좌석 및 요소의 둥근 모양 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 클릭 가능 표시 */
 }
 
 /* 운전석과 출입문 동일한 스타일 */
 .driver, .door {
     background-color: #ddd; /* 운전석과 출입문 동일한 배경색 */
-    margin-top: 0; /* 출입문의 마진 제거 */
 }
 
 /* 복도 스타일 */
 .door {
     margin-right: 5px; /* 복도 간격을 좁히기 위해 */
+}
+
+/* 좌석 간격 줄이기 */
+.left-column .row, .right-column .row {
+    margin-bottom: 0; /* 좌석 사이의 간격 제거 */
 }
