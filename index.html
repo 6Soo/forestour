@@ -26,10 +26,10 @@
 
         <!-- 출입문 그룹 (C열) -->
         <div class="door-group" id="door-group">
-            <div class="door">출입문</div>
+            <button class="seat" id="1C" data-seat="1C">1C</button> <!-- 1C 좌석이 출입문 자리로 이동 -->
             <div class="bus-seats right">
                 <div class="row" data-row="1">
-                    <button class="seat" data-seat="1C">1C</button>
+                    <div class="door">출입문</div> <!-- 출입문이 1C 좌석 자리로 이동 -->
                 </div>
                 <div class="row" data-row="2">
                     <button class="seat" data-seat="2C">2C</button>
@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <!-- 좌석 추가/삭제 및 변경 컨트롤 -->
+    <!-- 좌석 추가/삭제 컨트롤 -->
     <div class="controls">
         <label for="row-input">추가할 좌석 수:</label>
         <input type="number" id="row-input" min="1" value="1">
