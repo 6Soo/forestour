@@ -35,3 +35,8 @@
     background-color: #ddd; /* 운전석과 출입문 동일한 배경색 */
     margin-top: 0; /* 출입문의 마진 제거 */
 }
+
+/* 복도 스타일 */
+.door {
+    margin-right: 5px; /* 복도 간격을 좁히기 위해 */
+}
